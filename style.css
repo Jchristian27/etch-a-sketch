@@ -72,6 +72,8 @@ h1 {
 
 .settings {
   display: flex;
+  align-items: center;
+  justify-content: space-between;
   background-color: red;
   width: 600px;
   height: 50px;
@@ -79,6 +81,35 @@ h1 {
   border-top: 1px solid lightgray;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
+}
+
+.grid-size-btn {
+  margin-left: 50px;
+}
+
+#grid-size-btn {
+  background-color: white;
+  color: red;
+  font-size: 18px;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+.erase-btn {
+  margin-right: 50px;
+}
+
+#erase-btn {
+  background-color: white;
+  font-size: 18px;
+  color: red;
+  border: 1px solid black;
+  border-radius: 30px;
+}
+
+#grid-size-btn:hover,
+#erase-btn:hover {
+  background-color: yellow;
 }
 
 .footer {
