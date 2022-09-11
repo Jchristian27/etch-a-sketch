@@ -15,18 +15,21 @@ function makeGrid(num) {
     newDiv.style.width = `550px`;
     grid.appendChild(newDiv);
     for (j = 0; j < num; j++) {
-      innerDiv = document.createElement('div');
+      let innerDiv = document.createElement('div');
       innerDiv.classList.add("innerDiv");
       innerDiv.style.margin= "0";
       innerDiv.style.height = `${height}px`;
       innerDiv.style.width = `${width}px`;
+      innerDiv.addEventListener('mouseover', function() {
+        innerDiv.style.backgroundColor = 'black';
+      });
       newDiv.appendChild(innerDiv);
     }
   }
   
 }
 
-window.onload = makeGrid(16);
+window.onload = makeGrid(50);
 
 function changeGridSize() {
   let num = window.prompt('Enter a number between 1 and 50 to change the grid size.');
@@ -36,10 +39,6 @@ function changeGridSize() {
 function erase() {
   window.alert('It worked');
 }
-
-grid.addEventListener('mouseover', function() {
-  //innerDiv.style.backgroundColor = 'black';
-});
 
 gridSizeBtn.addEventListener('click', function() {
   changeGridSize();
