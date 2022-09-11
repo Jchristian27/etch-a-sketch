@@ -58,10 +58,23 @@ h1 {
 
 .grid-main-body-grid {
   display: flex;
+  flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
   width: 550px;
   height: 550px;
+  background-color: #ececec;
+}
+
+.newDiv {
+  display: flex;
+  flex-direction: row;
+  margin: 0;
+  padding: 0;
+}
+
+.innerDiv:hover {
+  background-color: black;
 }
 
 .grid-main-body-right {
