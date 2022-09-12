@@ -1,5 +1,4 @@
 * {
-  /* border: 1px solid blue; */
   margin: 0;
 }
 
@@ -10,7 +9,7 @@ body {
   justify-content: center;
   font-family: 'Palatino';
   background-color: beige;
-  /* height: 100vh; */
+  height: 100vh;
 }
 
 .container {
@@ -19,6 +18,7 @@ body {
   align-items: center;
   justify-content: center;
   background-color: beige;
+  margin-top: 50px;
 }
 
 .grid-main {
