@@ -37,8 +37,8 @@ function removeAllChildNodes(parent) {
 }
 
 function changeGridSize() {
-  let number = window.prompt('Enter a number between 1 and 50 to change the grid size.');
-  if (number < 1 || number > 50) {
+  let number = window.prompt('Enter a number between 1 and 64 to change the grid size.');
+  if (number < 1 || number > 64) {
     changeGridSize();
   } 
   removeAllChildNodes(grid);
