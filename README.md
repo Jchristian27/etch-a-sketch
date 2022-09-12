@@ -1,1 +1,1 @@
-# etch-a-sketch
+# An Etch A Sketch project to practice manipulating DOM elements. 
