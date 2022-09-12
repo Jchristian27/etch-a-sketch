@@ -1,10 +1,12 @@
 let gridSizeBtn = document.querySelector("#grid-size-btn");
 let eraseBtn = document.querySelector("#erase-btn");
 let grid = document.querySelector('.grid-main-body-grid');
-let newDivs = document.querySelectorAll('.newDiv');
-let innerDivs = document.querySelectorAll('.innerDiv');
+let newDiv = document.querySelectorAll('.newDiv');
+let innerDiv = document.getElementsByClassName('.innerDiv');
+let number = 16;
 
 function makeGrid(num) {
+  number = num
   height = 550/num;
   width = 550/num;
   for (i = 0; i < num; i++) {
@@ -29,15 +31,21 @@ function makeGrid(num) {
   
 }
 
-window.onload = makeGrid(50);
+window.onload = makeGrid(number);
 
-function changeGridSize() {
-  let num = window.prompt('Enter a number between 1 and 50 to change the grid size.');
-  makeGrid(num);
+function removeAllChildNodes(parent) {
+  while (parent.firstChild) {
+      parent.removeChild(parent.firstChild);
+  }
 }
 
-function erase() {
-  window.alert('It worked');
+function changeGridSize() {
+  let number = window.prompt('Enter a number between 1 and 50 to change the grid size.');
+  if (number < 1 || number > 50) {
+    changeGridSize();
+  }
+  removeAllChildNodes(grid);
+  makeGrid(number);
 }
 
 gridSizeBtn.addEventListener('click', function() {
@@ -45,5 +53,6 @@ gridSizeBtn.addEventListener('click', function() {
 });
 
 eraseBtn.addEventListener('click', function() {
-  erase();
+  removeAllChildNodes(grid);
+  makeGrid(number);
 });
