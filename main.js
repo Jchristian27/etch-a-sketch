@@ -42,12 +42,16 @@ function changeGridSize() {
     removeAllChildNodes(grid);
     makeGrid(16);
   } else if (number < 1 || number > 64) {
-    number = 16;
-    alert("You entered an invalid number. Please try again.");
-    changeGridSize();
+      number = 16;
+      alert("You entered an invalid number. Please try again.");
+      changeGridSize();
+  } else if (number > 1 && number < 65) {
+      removeAllChildNodes(grid);
+      makeGrid(number);
   } else {
-    removeAllChildNodes(grid);
-    makeGrid(number);
+    alert("An error occured. Please try again.");
+      removeAllChildNodes(grid);
+      makeGrid(16);
   }
 }
 
